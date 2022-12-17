@@ -1,0 +1,7 @@
+{
+  "bar": "foo",
+  // This is a comment.
+  "foo": /* This is also a comment */ "bar",
+  "num": 1,
+  "bb": [1, "Hey!"]
+}

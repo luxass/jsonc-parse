@@ -1,0 +1,19 @@
+{
+  "bar": "foo",
+  // This is a comment.
+  "foo": /* This is also a comment */ "bar",
+  "nested": {
+    // This is a comment.
+    "this": /* This is also a comment */ {
+      // This is a comment.
+      "is": {
+        "a": "nested" /* This is also a comment */ /* \"HMmm\" */
+      }
+    }
+  },
+  "aa": [
+    {
+      "type": "test"
+    }
+  ]
+}
