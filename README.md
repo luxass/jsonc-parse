@@ -15,7 +15,7 @@ npm install jsonc-parse
 ## Usage
 
 ```ts
-import { parseJSONC, parseJSONCFile } from "jsonc-parse"; 
+import { parseJSONC, parseJSONCFile } from "jsonc-parse";
 
 // From file
 const jsonCFile = await parseJSONCFile("./config.jsonc");
