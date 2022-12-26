@@ -5,5 +5,5 @@ export default defineConfig({
   dts: true,
   clean: true,
   treeshake: true,
-  format: ["cjs", "esm"]
+  format: ["esm", "cjs"]
 });
