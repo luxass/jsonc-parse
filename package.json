@@ -2,7 +2,7 @@
   "name": "jsonc-parse",
   "type": "module",
   "version": "1.0.3",
-  "packageManager": "pnpm@8.6.11",
+  "packageManager": "pnpm@8.6.12",
   "description": "A lightweight JSON with Comments parser.",
   "author": {
     "name": "Lucas Norgaard",
@@ -42,14 +42,14 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "strip-json-comments": "^5.0.0"
+    "strip-json-comments": "^5.0.1"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^3.2.0",
+    "@luxass/eslint-config": "^3.3.1",
     "@types/node": "^18.16.16",
-    "eslint": "^8.41.0",
-    "tsup": "^7.0.0",
-    "typescript": "^5.0.4",
-    "vitest": "^0.33.0"
+    "eslint": "^8.46.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.1.6",
+    "vitest": "^0.34.1"
   }
 }
