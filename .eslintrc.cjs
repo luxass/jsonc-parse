@@ -1,6 +1,6 @@
 module.exports = {
   extends: "@luxass",
   rules: {
-    "no-new-func": "off"
-  }
+    "no-new-func": "off",
+  },
 };

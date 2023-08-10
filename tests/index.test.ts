@@ -8,7 +8,7 @@ describe("jsonc-parse", () => {
 
     expect(test1?.bb).toEqual([
       1,
-      "Hey!"
+      "Hey!",
     ]);
     expect(test1?.num).toBe(1);
 
@@ -16,9 +16,9 @@ describe("jsonc-parse", () => {
     expect(test2?.nested).toEqual({
       this: {
         is: {
-          a: "nested"
-        }
-      }
+          a: "nested",
+        },
+      },
     });
 
     expect(test1?.bar).toEqual(test2?.bar);
@@ -31,7 +31,7 @@ describe("jsonc-parse", () => {
 
     expect(test1?.bb).toEqual([
       1,
-      "Hey!"
+      "Hey!",
     ]);
     expect(test1?.num).toBe(1);
 
@@ -39,9 +39,9 @@ describe("jsonc-parse", () => {
     expect(test2?.nested).toEqual({
       this: {
         is: {
-          a: "nested"
-        }
-      }
+          a: "nested",
+        },
+      },
     });
 
     expect(test1?.bar).toEqual(test2?.bar);
@@ -59,7 +59,7 @@ describe("jsonc-parse", () => {
     `);
     expect(jsonC).toEqual({
       bar: "foo",
-      foo: "bar"
+      foo: "bar",
     });
   });
 });

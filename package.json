@@ -5,7 +5,7 @@
   "packageManager": "pnpm@8.6.12",
   "description": "A lightweight JSON with Comments parser.",
   "author": {
-    "name": "Lucas Norgaard",
+    "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
@@ -18,16 +18,21 @@
   "bugs": {
     "url": "https://github.com/luxass/jsonc-parse/issues"
   },
-  "keywords": [],
+  "keywords": [
+    "jsonc",
+    "json",
+    "comments",
+    "jsonc-parse"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     }
   },
   "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -39,7 +44,8 @@
     "build": "tsup",
     "test": "vitest --run",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "strip-json-comments": "^5.0.1"
