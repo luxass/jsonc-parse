@@ -9,7 +9,7 @@ export default defineConfig({
   bundle: true,
   outExtension(ctx) {
     return {
-      js: ctx.format === "cjs" ? "cjs" : "mjs",
+      js: ctx.format === "cjs" ? ".cjs" : ".mjs",
     };
   },
 });
