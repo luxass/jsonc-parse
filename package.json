@@ -2,7 +2,7 @@
   "name": "jsonc-parse",
   "type": "module",
   "version": "1.0.4",
-  "packageManager": "pnpm@8.6.12",
+  "packageManager": "pnpm@8.7.1",
   "description": "A lightweight JSON with Comments parser.",
   "author": {
     "name": "Lucas Nørgård",
