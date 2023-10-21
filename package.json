@@ -2,7 +2,7 @@
   "name": "jsonc-parse",
   "type": "module",
   "version": "1.0.4",
-  "packageManager": "pnpm@8.7.5",
+  "packageManager": "pnpm@8.9.2",
   "description": "A lightweight JSON with Comments parser.",
   "author": {
     "name": "Lucas Nørgård",
@@ -27,9 +27,10 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
+      "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -38,7 +39,7 @@
     "dist"
   ],
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "scripts": {
     "build": "tsup",
@@ -51,11 +52,11 @@
     "strip-json-comments": "^5.0.1"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^3.3.1",
+    "@luxass/eslint-config": "^3.3.2",
     "@types/node": "^18.16.16",
-    "eslint": "^8.46.0",
+    "eslint": "^8.52.0",
     "tsup": "^7.2.0",
-    "typescript": "^5.1.6",
-    "vitest": "^0.34.1"
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
   }
 }
