@@ -1,16 +1,28 @@
 import { readFile } from "node:fs/promises";
 import { readFileSync } from "node:fs";
-import strip from "strip-json-comments";
+import { strip } from "./strip";
 import type {
   Options,
-} from "strip-json-comments";
+} from "./strip";
 
+/**
+ * Parse a JSON string, removing comments.
+ * @param {string} data - The JSON string to parse.
+ * @param {Options} options - The options to pass to `@luxass/strip-json-comments`.
+ * @returns {T | undefined} The parsed JSON.
+ */
 export function parse<T = Record<string, any>>(data: string, options?: Options): T | undefined {
   try {
     return new Function(`return ${strip(data, options).trim()}`)();
   } catch (_) {}
 }
 
+/**
+ * Parse a JSON file, removing comments.
+ * @param {string} path - The path to the file to parse.
+ * @param {Options} options - The options to pass to `@luxass/strip-json-comments`.
+ * @returns {Promise<T | undefined>} The parsed JSON.
+ */
 export async function parseFile<T = Record<string, any>>(path: string, options?: Options): Promise<T | undefined> {
   const content = await readFile(path, {
     encoding: "utf-8",
@@ -19,6 +31,12 @@ export async function parseFile<T = Record<string, any>>(path: string, options?:
   return parse(content, options);
 }
 
+/**
+ * Parse a JSON file, removing comments.
+ * @param {string} path - The path to the file to parse.
+ * @param {Options} options - The options to pass to `@luxass/strip-json-comments`.
+ * @returns {T | undefined} The parsed JSON.
+ */
 export function parseFileSync<T = Record<string, any>>(path: string, options?: Options): T | undefined {
   const content = readFileSync(path, {
     encoding: "utf-8",
@@ -26,3 +44,8 @@ export function parseFileSync<T = Record<string, any>>(path: string, options?: O
 
   return parse(content, options);
 }
+
+export {
+  strip,
+};
+export type { Options };

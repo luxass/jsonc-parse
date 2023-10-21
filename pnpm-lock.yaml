@@ -5,9 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  strip-json-comments:
-    specifier: ^5.0.1
-    version: 5.0.1
+  '@luxass/strip-json-comments':
+    specifier: ^1.0.0
+    version: 1.0.0
 
 devDependencies:
   '@luxass/eslint-config':
@@ -429,6 +429,11 @@ packages:
       - supports-color
       - typescript
     dev: true
+
+  /@luxass/strip-json-comments@1.0.0:
+    resolution: {integrity: sha512-zKiAlO9F7wPS+9L5XvhmeeMvkV08bvcgeRfON2BHCXQANSal5ny+K9bCH3r2JA6PlB5Yf9cZB1cP8iGki3ZPig==}
+    engines: {node: '>=18'}
+    dev: false
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2372,11 +2377,6 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
     dev: true
-
-  /strip-json-comments@5.0.1:
-    resolution: {integrity: sha512-0fk9zBqO67Nq5M/m45qHCJxylV/DhBlIOVExqgOMiCCrzrhU6tCibRXNqE3jwJLftzE9SNuZtYbpzcO+i9FiKw==}
-    engines: {node: '>=14.16'}
-    dev: false
 
   /strip-literal@1.3.0:
     resolution: {integrity: sha512-PugKzOsyXpArk0yWmUwqOZecSO0GH0bPoctLcqNDH9J04pVW3lflYE0ujElBGTloevcxF5MofAOZ7C5l2b+wLg==}

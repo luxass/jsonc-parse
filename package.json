@@ -35,6 +35,16 @@
         "default": "./dist/index.cjs"
       }
     },
+    "./strip": {
+      "import": {
+        "types": "./dist/strip.d.ts",
+        "default": "./dist/strip.mjs"
+      },
+      "require": {
+        "types": "./dist/strip.d.cts",
+        "default": "./dist/strip.cjs"
+      }
+    },
     "./package.json": "./package.json"
   },
   "main": "./dist/index.cjs",
@@ -54,7 +64,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "strip-json-comments": "^5.0.1"
+    "@luxass/strip-json-comments": "^1.0.0"
   },
   "devDependencies": {
     "@luxass/eslint-config": "^3.3.2",
