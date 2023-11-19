@@ -1,52 +1,41 @@
 name: CI
 
 on:
-  pull_request:
+  push:
     branches:
       - main
-  push:
+  pull_request:
     branches:
       - main
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-      - run: corepack enable
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: pnpm
-
-      - name: 📦 Install dependencies
-        run: pnpm install
-
-      - name: 🔠 Lint project
-        run: pnpm lint
-
-      - name: ✅ TypeCheck project
-        run: pnpm typecheck
-
-  test:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [18, 20]
     steps:
       - uses: actions/checkout@v4
-      - run: corepack enable
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: pnpm
 
-      - name: 📦 Install dependencies
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version}}
+
+      - name: Install dependencies
         run: pnpm install
 
-      - name: 🛠 Build project
+      - name: Build
         run: pnpm build
 
-      - name: 🧪 Build project
+      - name: Lint
+        run: pnpm lint
+
+      - name: Test
         run: pnpm test
+
+      - name: Typecheck
+        run: pnpm typecheck
