@@ -9,7 +9,7 @@
 ## 📦 Installation
 
 ```sh
-pnpm install jsonc-parse
+npm install jsonc-parse
 ```
 
 ## 📚 Usage
