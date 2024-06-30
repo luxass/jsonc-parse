@@ -11,19 +11,19 @@ dependencies:
 
 devDependencies:
   '@luxass/eslint-config':
-    specifier: ^4.2.5
+    specifier: 4.2.5
     version: 4.2.5(@vue/compiler-sfc@3.4.15)(eslint@8.56.0)(typescript@5.3.3)(vitest@1.2.1)
   '@types/node':
-    specifier: ^20.9.2
+    specifier: 20.11.6
     version: 20.11.6
   eslint:
     specifier: ^8.56.0
     version: 8.56.0
   tsup:
-    specifier: ^8.0.1
+    specifier: 8.0.1
     version: 8.0.1(typescript@5.3.3)
   typescript:
-    specifier: ^5.3.3
+    specifier: 5.3.3
     version: 5.3.3
   vitest:
     specifier: ^1.2.1

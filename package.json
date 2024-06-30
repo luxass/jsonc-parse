@@ -67,11 +67,11 @@
     "@luxass/strip-json-comments": "^1.2.0"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^4.2.5",
-    "@types/node": "^20.9.2",
+    "@luxass/eslint-config": "4.2.5",
+    "@types/node": "20.11.6",
     "eslint": "^8.56.0",
-    "tsup": "^8.0.1",
-    "typescript": "^5.3.3",
+    "tsup": "8.0.1",
+    "typescript": "5.3.3",
     "vitest": "^1.2.1"
   }
 }
