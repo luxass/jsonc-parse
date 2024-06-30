@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@luxass/strip-json-comments':
-    specifier: ^1.2.0
-    version: 1.2.0
+    specifier: ^1.3.2
+    version: 1.3.2
 
 devDependencies:
   '@luxass/eslint-config':
@@ -59,11 +59,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  /@babel/helper-validator-identifier@7.22.20:
-    resolution: {integrity: sha512-Y4OZ+ytlatR8AI+8KZfKuL5urKp7qey08ha31L8b3BwewJAoJamTzyvxPR/5D+KkdJCGPq/+8TukHBlY10FX9A==}
-    engines: {node: '>=6.9.0'}
-    dev: true
-
   /@babel/helper-validator-identifier@7.24.7:
     resolution: {integrity: sha512-rR+PBcQ1SMQDDyF6X0wxtG8QyLCgUB0eRAGguqRLfkCA87l7yAP7ehq8SNj96OOGTO8OBV70KhuFYcIkHXOg0w==}
     engines: {node: '>=6.9.0'}
@@ -91,7 +86,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/helper-string-parser': 7.23.4
-      '@babel/helper-validator-identifier': 7.22.20
+      '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
     dev: true
 
@@ -743,8 +738,8 @@ packages:
       - vitest
     dev: true
 
-  /@luxass/strip-json-comments@1.2.0:
-    resolution: {integrity: sha512-JNz1ha89f+pJDxSoFwSnIX3MdBpFbxNlILfoN0SHBZpsw4BjEKWmYyV1mFfBTbfDQqZQJELFlmAcoM54dvVfzw==}
+  /@luxass/strip-json-comments@1.3.2:
+    resolution: {integrity: sha512-KwHHKC48JLrpEPO5QGbOncTKcbNjEKCwx8jb0fFHGaQWoPooPosJ9lYYWLPdr0DdLKHoGckd4d4oO0aNjwaMyw==}
     engines: {node: '>=18'}
     dev: false
 

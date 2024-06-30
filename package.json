@@ -64,7 +64,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@luxass/strip-json-comments": "^1.2.0"
+    "@luxass/strip-json-comments": "^1.3.2"
   },
   "devDependencies": {
     "@luxass/eslint-config": "^4.7.0",
