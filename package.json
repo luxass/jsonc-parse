@@ -13,7 +13,7 @@
   "homepage": "https://github.com/luxass/jsonc-parse",
   "repository": {
     "type": "git",
-    "url": "https://github.com/luxass/jsonc-parse"
+    "url": "git+https://github.com/luxass/jsonc-parse.git"
   },
   "bugs": {
     "url": "https://github.com/luxass/jsonc-parse/issues"
