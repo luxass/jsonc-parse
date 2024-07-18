@@ -18,7 +18,7 @@ export function parse<T = Record<string, any>>(data: string, options?: Options):
   try {
     // eslint-disable-next-line no-new-func
     return new Function(`return ${strip(data, options).trim()}`)();
-  } catch (_) {}
+  } catch {}
 }
 
 /**
