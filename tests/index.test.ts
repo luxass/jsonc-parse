@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { expect, it } from "vitest";
 import { parse, parseFile, parseFileSync } from "../src";
 
 it("parse jsonc from file (async)", async () => {
