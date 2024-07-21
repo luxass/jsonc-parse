@@ -10,15 +10,17 @@ import type {
  * @param {string} data - The JSON string to parse.
  * @param {Options} options - The options to pass to `@luxass/strip-json-comments`.
  * @returns {T | undefined} The parsed JSON.
- *
- * NOTE:
- * This function is not safe to use with untrusted data due to the use of `new Function()`.
  */
 export function parse<T = Record<string, any>>(data: string, options?: Options): T | undefined {
   try {
-    // eslint-disable-next-line no-new-func
-    return new Function(`return ${strip(data, options).trim()}`)();
-  } catch {}
+    // fast path if the json is valid.
+    return JSON.parse(data);
+  } catch {
+    return JSON.parse(strip(data, {
+      ...options,
+      trailingCommas: true,
+    }));
+  }
 }
 
 /**
@@ -26,9 +28,6 @@ export function parse<T = Record<string, any>>(data: string, options?: Options):
  * @param {string} path - The path to the file to parse.
  * @param {Options} options - The options to pass to `@luxass/strip-json-comments`.
  * @returns {Promise<T | undefined>} The parsed JSON.
- *
- * NOTE:
- * This function is not safe to use with untrusted data due to the use of `new Function()`.
  */
 export async function parseFile<T = Record<string, any>>(path: string, options?: Options): Promise<T | undefined> {
   const content = await readFile(path, {
@@ -43,9 +42,6 @@ export async function parseFile<T = Record<string, any>>(path: string, options?:
  * @param {string} path - The path to the file to parse.
  * @param {Options} options - The options to pass to `@luxass/strip-json-comments`.
  * @returns {T | undefined} The parsed JSON.
- *
- * NOTE:
- * This function is not safe to use with untrusted data due to the use of `new Function()`.
  */
 export function parseFileSync<T = Record<string, any>>(path: string, options?: Options): T | undefined {
   const content = readFileSync(path, {
