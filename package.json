@@ -1,6 +1,6 @@
 {
   "name": "jsonc-parse",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "A lightweight JSON with Comments parser.",
   "type": "module",
   "author": {
