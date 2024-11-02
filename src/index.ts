@@ -1,9 +1,9 @@
-import { readFile } from "node:fs/promises";
-import { readFileSync } from "node:fs";
-import { strip } from "./strip";
 import type {
   Options,
 } from "./strip";
+import { readFileSync } from "node:fs";
+import { readFile } from "node:fs/promises";
+import { strip } from "./strip";
 
 /**
  * Parse a JSON string, removing comments.
