@@ -11,31 +11,28 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18, 20]
     steps:
       - uses: actions/checkout@v4.2.2
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+      - name: setup pnpm
+        uses: pnpm/action-setup@v4.0.0
 
-      - name: Setup node
+      - name: setup node
         uses: actions/setup-node@v4.1.0
         with:
-          node-version: ${{ matrix.node-version}}
+          node-version: lts/*
 
-      - name: Install dependencies
+      - name: install dependencies
         run: pnpm install
 
-      - name: Build
+      - name: build
         run: pnpm build
 
-      - name: Lint
+      - name: lint
         run: pnpm lint
 
-      - name: Test
+      - name: test
         run: pnpm test
 
-      - name: Typecheck
+      - name: typecheck
         run: pnpm typecheck

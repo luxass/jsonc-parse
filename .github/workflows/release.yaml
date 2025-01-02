@@ -16,33 +16,32 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+      - name: setup pnpm
+        uses: pnpm/action-setup@v4.0.0
 
-      - name: Setup node
+      - name: setup node
         uses: actions/setup-node@v4.1.0
         with:
-          registry-url: "https://registry.npmjs.org"
-          node-version: 20
+          node-version: lts/*
 
       - run: pnpx changelogithub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install dependencies
+      - name: install dependencies
         run: pnpm install
 
-      - name: Build
+      - name: build
         run: pnpm build
 
-      - name: Publish to NPM
+      - name: publish to npm
         run: npm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
 
-      - name: Publish to JSR
+      - name: publish to jsr
         run: npx jsr publish --allow-dirty
 
-      - name: Print Dirty Files
+      - name: print dirty files
         run: git status --porcelain
