@@ -38,10 +38,10 @@ const jsonC = parse(`{
 you can also just import the `strip` function to remove comments from a string.
 
 ```ts
-import { strip } from "jsonc-parse/strip";
-
 // or
 import { strip } from "jsonc-parse";
+
+import { strip } from "jsonc-parse/strip";
 
 const json = strip(`{
   "bar": "foo",
