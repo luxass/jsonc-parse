@@ -8,7 +8,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.11.0",
+  "packageManager": "pnpm@10.13.1",
   "license": "MIT",
   "homepage": "https://github.com/luxass/jsonc-parse",
   "repository": {
