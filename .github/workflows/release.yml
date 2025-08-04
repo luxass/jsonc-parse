@@ -54,7 +54,7 @@ jobs:
           fi
 
       - name: publish to npm
-        run: npm publish --tag $TAG --access public --no-git-checks
+        run: pnpm publish --tag $TAG --access public --no-git-checks
         env:
           TAG: ${{ steps.tag.outputs.tag }}
           NPM_CONFIG_PROVENANCE: true
