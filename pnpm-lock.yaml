@@ -19,7 +19,7 @@ importers:
         specifier: 22.16.5
         version: 22.16.5
       eslint:
-        specifier: ^9.17.0
+        specifier: 9.27.0
         version: 9.27.0
       tsup:
         specifier: 8.5.0
