@@ -8,7 +8,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.20.0",
   "license": "MIT",
   "homepage": "https://github.com/luxass/jsonc-parse",
   "repository": {
@@ -64,14 +64,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@luxass/strip-json-comments": "1.4.0"
+    "@luxass/strip-json-comments": "2.0.0"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "4.19.0",
+    "@luxass/eslint-config": "6.0.1",
     "@types/node": "22.16.5",
-    "eslint": "^9.17.0",
+    "eslint": "^9.39.1",
     "tsup": "8.5.0",
-    "typescript": "5.8.3",
-    "vitest": "3.1.4"
+    "typescript": "5.9.3",
+    "vitest": "4.0.7"
   }
 }
