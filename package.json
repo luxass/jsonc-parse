@@ -49,11 +49,11 @@
     "@luxass/strip-json-comments": "2.0.0"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "6.0.1",
-    "@types/node": "22.16.5",
+    "@luxass/eslint-config": "6.0.3",
+    "@types/node": "22.19.7",
     "eslint": "9.39.1",
-    "publint": "0.3.15",
-    "tsdown": "0.16.0",
+    "publint": "0.3.17",
+    "tsdown": "0.20.1",
     "typescript": "5.9.3",
     "vitest": "4.0.7"
   }
