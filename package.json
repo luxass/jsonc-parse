@@ -49,7 +49,7 @@
     "@luxass/strip-json-comments": "2.0.0"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "6.0.1",
+    "@luxass/eslint-config": "7.4.2",
     "@types/node": "22.16.5",
     "eslint": "9.39.1",
     "publint": "0.3.15",
