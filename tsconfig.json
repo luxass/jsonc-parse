@@ -1,19 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es2022",
-    "lib": ["es2022"],
+    "target": "ESNext",
+    "lib": ["ES2022", "ESNext.Disposable"],
+    "types": ["node"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "resolveJsonModule": true,
-    "allowJs": true,
     "strict": true,
-    "noUncheckedIndexedAccess": true,
+    "declaration": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*"],
+  "include": ["src", "tests"],
   "exclude": ["node_modules", "dist"]
 }
