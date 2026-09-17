@@ -1,0 +1,28 @@
+ignoreScripts: true
+minimumReleaseAge: 7200
+trustPolicy: no-downgrade
+catalogMode: prefer
+strictDepBuilds: true
+blockExoticSubdeps: true
+
+minimumReleaseAgeExclude:
+  - "@luxass/strip-json-comments"
+
+catalogs:
+  runtime:
+    "@luxass/strip-json-comments": 2.0.0
+
+  dev:
+    oxfmt: 0.67.0
+    oxlint: 1.82.0
+    oxlint-tsgolint: 7.0.2001
+    publint: 0.3.24
+    tsdown: 0.23.0
+    typescript: 7.0.2
+
+  testing:
+    "@vitest/coverage-v8": 5.0.0
+    vitest: 5.0.0
+
+  types:
+    "@types/node": 24.13.4
