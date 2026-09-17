@@ -10,7 +10,7 @@ minimumReleaseAgeExclude:
 
 catalogs:
   runtime:
-    "@luxass/strip-json-comments": 2.0.0
+    "@luxass/strip-json-comments": 2.0.2
 
   dev:
     oxfmt: 0.67.0

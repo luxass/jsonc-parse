@@ -184,8 +184,8 @@ catalogs:
       version: 7.0.2
   runtime:
     '@luxass/strip-json-comments':
-      specifier: 2.0.0
-      version: 2.0.0
+      specifier: 2.0.2
+      version: 2.0.2
   testing:
     '@vitest/coverage-v8':
       specifier: 5.0.0
@@ -204,7 +204,7 @@ importers:
     dependencies:
       '@luxass/strip-json-comments':
         specifier: catalog:runtime
-        version: 2.0.0
+        version: 2.0.2
     devDependencies:
       '@types/node':
         specifier: catalog:types
@@ -267,9 +267,9 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@luxass/strip-json-comments@2.0.0':
-    resolution: {integrity: sha512-Sj6sFKYQ3Rrp6bhKbBUbHJdT5ma+KAFHw/0O0SF+XSI3Wt5Y7sbN8hSdVVSD1NbmAxrtvOuhTUJDstS000OAfQ==}
-    engines: {node: '>=20'}
+  '@luxass/strip-json-comments@2.0.2':
+    resolution: {integrity: sha512-EWtlxDlLx1LYFLwS47FEb92DeXdQiIGJBTrxHiL4v1ajZ4ZuTlIuA+my6b1OZkXgDXNILqvHskzIsk4Nii/XaQ==}
+    engines: {node: '>=24'}
 
   '@oxc-project/types@0.149.0':
     resolution: {integrity: sha512-Efcc+iF0j3Bf67YjEqIqWXbX5XddXoK/Mw4K1/JuXwRCZ8N16VR7iT23nlCc9XrveFVh/E5Rqs2StT0V8v9LdA==}
@@ -1415,7 +1415,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@luxass/strip-json-comments@2.0.0': {}
+  '@luxass/strip-json-comments@2.0.2': {}
 
   '@oxc-project/types@0.149.0': {}
 
