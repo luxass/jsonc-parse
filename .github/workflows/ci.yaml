@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request_target' &&
+    github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+  ci:
+    uses: luxass/shared-workflows/.github/workflows/reusable-ci.yaml@a80d13d310b91d509547203435ad21b68ae47ba1 # v0.12.0
+    permissions:
+      contents: read
+    with:
+      fmt: true
+      fmt-script: "fmt:check"
+
+  test:
+    name: "test (os: ${{ matrix.os }}, node: ${{ matrix.node }})"
+    strategy:
+      matrix:
+        node: [24, 26]
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+      fail-fast: false
+    uses: luxass/shared-workflows/.github/workflows/reusable-test.yaml@a80d13d310b91d509547203435ad21b68ae47ba1 # v0.12.0
+    permissions:
+      contents: read
+    with:
+      runs-on: ${{ matrix.os }}
+      node-version: ${{ matrix.node }}
+      pre-test-script: "build"
