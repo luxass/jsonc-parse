@@ -1,14 +1,12 @@
 import { expect, it } from "vitest";
+
 import { parse, parseFile, parseFileSync } from "../src";
 
 it("parse jsonc from file (async)", async () => {
   const test1 = await parseFile("./tests/test1.jsonc");
   const test2 = await parseFile("./tests/test2.jsonc");
 
-  expect(test1?.bb).toEqual([
-    1,
-    "Hey!",
-  ]);
+  expect(test1?.bb).toEqual([1, "Hey!"]);
   expect(test1?.num).toBe(1);
 
   expect(test2?.aa).toBeTypeOf("object");
@@ -28,10 +26,7 @@ it("parse jsonc from file", () => {
   const test1 = parseFileSync("./tests/test1.jsonc");
   const test2 = parseFileSync("./tests/test2.jsonc");
 
-  expect(test1?.bb).toEqual([
-    1,
-    "Hey!",
-  ]);
+  expect(test1?.bb).toEqual([1, "Hey!"]);
   expect(test1?.num).toBe(1);
 
   expect(test2?.aa).toBeTypeOf("object");

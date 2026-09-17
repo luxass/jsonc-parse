@@ -7,13 +7,13 @@
     "this": /* This is also a comment */ {
       // This is a comment.
       "is": {
-        "a": "nested" /* This is also a comment */ /* \"HMmm\" */
-      }
-    }
+        "a": "nested" /* This is also a comment */ /* \"HMmm\" */,
+      },
+    },
   },
   "aa": [
     {
-      "type": "test"
-    }
-  ]
+      "type": "test",
+    },
+  ],
 }
