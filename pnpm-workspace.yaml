@@ -21,8 +21,8 @@ catalogs:
     typescript: 7.0.2
 
   testing:
-    "@vitest/coverage-v8": 5.0.0
-    vitest: 5.0.0
+    "@vitest/coverage-v8": 5.0.3
+    vitest: 5.0.3
 
   types:
     "@types/node": 24.19.0
