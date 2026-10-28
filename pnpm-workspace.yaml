@@ -25,4 +25,4 @@ catalogs:
     vitest: 5.0.0
 
   types:
-    "@types/node": 24.19.0
+    "@types/node": 26.6.5
