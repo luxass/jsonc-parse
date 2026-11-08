@@ -13,7 +13,7 @@ catalogs:
     "@luxass/strip-json-comments": 2.0.2
 
   dev:
-    oxfmt: 0.70.0
+    oxfmt: 0.75.0
     oxlint: 1.90.0
     oxlint-tsgolint: 7.0.2005
     publint: 0.3.24
