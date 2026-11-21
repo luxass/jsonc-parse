@@ -39,7 +39,6 @@ you can also just import the `strip` function to remove comments from a string.
 ```ts
 // or
 import { strip } from "jsonc-parse";
-
 import { strip } from "jsonc-parse/strip";
 
 const json = strip(`{
