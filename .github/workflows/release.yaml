@@ -1,18 +1,29 @@
 name: Release
 
 on:
-  push:
-    tags:
-      - "v*"
+  workflow_dispatch:
+    inputs:
+      expected-sha:
+        description: Optional exact commit SHA for automated dispatches
+        type: string
+        required: false
+      release-notes:
+        description: Optional intro above the generated release notes
+        type: string
+        required: false
 
 permissions: {}
 
+concurrency:
+  group: npm-staged-release
+  cancel-in-progress: false
+
 jobs:
   release:
-    uses: luxass/shared-workflows/.github/workflows/reusable-release-npm.yaml@9770f7268daf358179c45895de8becc2e8525984 # v0.14.0
     permissions:
       contents: write
       id-token: write
+    uses: luxass/shared-workflows/.github/workflows/reusable-release-npm-staged.yaml@10298e06aecc428b39ef4121636400396b53a1fa # v0.16.0
     with:
-      environment: npm-registry
-      stage: true
+      expected-sha: ${{ inputs.expected-sha }}
+      release-notes: ${{ inputs.release-notes }}
