@@ -23,7 +23,7 @@ jobs:
     permissions:
       contents: write
       id-token: write
-    uses: luxass/shared-workflows/.github/workflows/reusable-release-npm-staged.yaml@10298e06aecc428b39ef4121636400396b53a1fa # v0.16.0
+    uses: luxass/shared-workflows/.github/workflows/reusable-release-npm-staged.yaml@411fe8f8a0a53eab5153356ac5e0f174cd245eb2 # v0.17.1
     with:
       expected-sha: ${{ inputs.expected-sha }}
       release-notes: ${{ inputs.release-notes }}
